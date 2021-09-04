@@ -1,0 +1,19 @@
+{
+    "name": "ucwords/zredis",
+    "description": "可直观观察 redis 通信协议的 PHP 实现的客户端",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ucwords\\Zredis\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ucwords",
+            "email": "991347487@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
