@@ -1,7 +1,5 @@
 <?php
 
-
-
 require '../vendor/autoload.php';
 
 $singleServer = [
@@ -15,23 +13,26 @@ $client = new Ucwords\Zredis\Client($singleServer);
 //$client->set(true, 'library', 'library');
 
 // 批量回复 示例
-// $client->get(true, 'library');
+//$client->get(true, 'library');
 
-// 回复 整型数字
-// $client->exists(true, 'test_hash');
+$client->hgetall(true, 'test_hash');
 
 
-// hash set
-// $client->hset(true, 'test_hash', 'attr', 2);
+//
+//// 回复 整型数字
+//$client->exists(true, 'test_hash');
 
-// hash set
-// $client->hget(true, 'test_hash', 'attr');
-
-// 错误回复
-// $client->hgetall(true, 'library');
-
-// 二进制安全
+//// hash set
+//$client->hset(true, 'test_hash', 'attr', 2);
+//
+//// hash set
+//$client->hget(true, 'test_hash', 'attr');
+//
+//// 错误回复
+//$client->hgetall(true, 'library');
+//
+//// 二进制安全
 //$client->set(true, "test\0test", 'test');
-// $client->get(true, "test\0test");
+//$client->get(true, "test\0test");
 
 
