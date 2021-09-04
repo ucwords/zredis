@@ -36,27 +36,32 @@ class Colors
         $this->backgroundColors['light_gray']   = '47';
     }
 
-    public function getColoredString($string, $foreground_color = null, $background_color = null) {
+    public function getColoredString($string, $foregroundColor = null, $backgroundColor = null)
+    {
 
         $colored_string = "";
 
-        if (isset($this->foregroundColors[$foreground_color])) {
-            $colored_string .= "\033[" . $this->foregroundColors[$foreground_color] . "m";
+        if (isset($this->foregroundColors[$foregroundColor])) {
+
+            $colored_string .= "\033[" . $this->foregroundColors[$foregroundColor] . "m";
         }
 
-        if (isset($this->backgroundColors[$background_color])) {
-            $colored_string .= "\033[" . $this->backgroundColors[$background_color] . "m";
+        if (isset($this->backgroundColors[$backgroundColor])) {
+
+            $colored_string .= "\033[" . $this->backgroundColors[$backgroundColor] . "m";
         }
 
         $colored_string .= $string . "\033[0m";
         return $colored_string;
     }
 
-    public function getForegroundColors() {
+    public function getForegroundColors()
+    {
         return array_keys($this->foregroundColors);
     }
 
-    public function getBackgroundColors() {
+    public function getBackgroundColors()
+    {
         return array_keys($this->backgroundColors);
     }
 }
